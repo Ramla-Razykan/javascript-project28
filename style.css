@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #fff;
+    color: #000000;
 }
 
 html {
@@ -15,20 +15,23 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(41,54,195,1) 100%);
 }
 
 h1 {
     font-size: 6rem;
-    color: #000;
 }
 
 .container {
-    width: 70%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #e48989;
+    backdrop-filter: blur(10px);
+    background-color: #ffffff33;
+    border-radius: 10px;
     padding: 2rem;
 }
 
@@ -36,6 +39,8 @@ h1 {
     width: 70%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-bottom: 1rem;
 }
 
@@ -44,6 +49,8 @@ h1 {
 }
 
 .key-div input {
+    width: 57.5%;
+    height: 3rem;
     font-size: 1.5rem;
     padding: 0 0.5rem;
     border: 1px solid #ccc;
@@ -53,10 +60,11 @@ h1 {
 
 #object-display {
     width: 60%;
-    background: #eed7d775;
+    background: #c5c1c175;
     padding: 1rem;
     border-radius: 5px;
     margin-bottom: 1rem;
+    visibility: hidden;
     font-size: 2rem;
 }
 
@@ -73,14 +81,14 @@ h1 {
 
 #user-input::placeholder,
 .key-div input::placeholder {
-    color: #fff;
+    color: #000000;
 }
 
 #status-message,
 #method-result {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #408309;
+    color: #0d49a3;
 }
 
 .add-btn,
@@ -88,18 +96,20 @@ h1 {
     width: 17rem;
     height: 4rem;
     font-size: 1.8rem;
-    border: 1px solid #eed7d775;
-    background: #ee1c6c75;
+    border: 1px solid #ffffff75;
+    background: #277a06;
+    color: #fff;
     border-radius: 5px;
     margin-bottom: 1rem;
 }
 
 .add-btn:hover,
 .reset-btn:hover {
-    background: #ee0b6275;
+    background: #3aad05;
 }
 
 .bttons-div {
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -110,14 +120,14 @@ h1 {
     width: 17rem;
     height: 4rem;
     font-size: 1.8rem;
-    border: 1px solid #eed7d775;
-    background: #eed7d775;
+    border: 1px solid #ffffff75;
+    background: #0000003a;
     border-radius: 5px;
     margin-bottom: 1rem;
 }
 
 .bttons-div button:hover {
-    background: #eed7d7dc;
+    background: #02020286;
 }
 
 @media (max-width:768px) {
@@ -150,16 +160,17 @@ h1 {
         font-size: 55%;
     }
 }
+
 @media (max-width: 320px) {
     html {
         font-size: 50%;
     }
 
-    h1{
+    h1 {
         font-size: 5rem;
     }
 
-    .key-div{
+    .key-div {
         flex-direction: column;
     }
 }

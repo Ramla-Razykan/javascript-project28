@@ -1,6 +1,7 @@
 let objectData = {};
 let requiredValues = 0;
 let valuesEntered = 0;
+let objectDisplay = document.getElementById("object-display");
 
 document.getElementById("key-count").addEventListener("input", (e) => {
     const value = parseInt(e.target.value);
@@ -17,7 +18,7 @@ document.getElementById("key-count").addEventListener("input", (e) => {
     requiredValues = value;
     valuesEntered = 0;
     objectData = {};
-    document.getElementById("object-display").innerHTML = "";
+    objectDisplay.innerHTML = "";
     document.getElementById("status-message").textContent = `${requiredValues} values needed.`;
 });
 
@@ -28,7 +29,8 @@ function addValue() {
         if (valuesEntered < requiredValues) {
             valuesEntered++;
             objectData[`key${valuesEntered}`] = inputValue;
-            document.getElementById("object-display").innerHTML = `<pre>${JSON.stringify(objectData, null, 2)}</pre>`;
+            objectDisplay.style.visibility = "visible";
+            objectDisplay.innerHTML = `<pre>${JSON.stringify(objectData, null, 2)}</pre>`;
 
             if (valuesEntered < requiredValues) {
                 document.getElementById("status-message").textContent = `${requiredValues - valuesEntered} more value(s) left.`;
