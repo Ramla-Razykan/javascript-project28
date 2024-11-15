@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 6rem;
+    color: #000;
+}
+
+.container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #e48989;
+    padding: 2rem;
+}
+
+.key-div {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.key-div label {
+    font-size: 2rem;
+}
+
+.key-div input {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+    border: 1px solid #ccc;
+    background: #eed7d775;
+    border-radius: 5px;
+}
+
+#object-display {
+    width: 60%;
+    background: #eed7d775;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+#user-input {
+    width: 40%;
+    height: 3rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    padding: 0 0.5rem;
+    background: #eed7d775;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#user-input::placeholder,
+.key-div input::placeholder {
+    color: #fff;
+}
+
+#status-message,
+#method-result {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #408309;
+}
+
+.add-btn,
+.reset-btn {
+    width: 17rem;
+    height: 4rem;
+    font-size: 1.8rem;
+    border: 1px solid #eed7d775;
+    background: #ee1c6c75;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.add-btn:hover,
+.reset-btn:hover {
+    background: #ee0b6275;
+}
+
+.bttons-div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.bttons-div button {
+    width: 17rem;
+    height: 4rem;
+    font-size: 1.8rem;
+    border: 1px solid #eed7d775;
+    background: #eed7d775;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.bttons-div button:hover {
+    background: #eed7d7dc;
+}
+
+@media (max-width:768px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 430px) {
+    .key-div {
+        width: 100%;
+    }
+
+    .key-div label {
+        font-size: 1.7rem;
+    }
+
+    #user-input {
+        width: 80%;
+    }
+
+    .bttons-div button {
+        width: 13rem;
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 375px) {
+    html {
+        font-size: 55%;
+    }
+}
+@media (max-width: 320px) {
+    html {
+        font-size: 50%;
+    }
+
+    h1{
+        font-size: 5rem;
+    }
+
+    .key-div{
+        flex-direction: column;
+    }
+}
